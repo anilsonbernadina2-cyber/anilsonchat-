@@ -1,21 +1,127 @@
 <!DOCTYPE html>
+
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anilson Chat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f7;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat {
+      width: 100%;
+      max-width: 500px;
+      height: 90vh;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: #1769aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+    }
+
+    .header p {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .message {
+      background: #e8f1f8;
+      padding: 12px 15px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      max-width: 85%;
+    }
+
+    .input-area {
+      display: flex;
+      padding: 12px;
+      border-top: 1px solid #ddd;
+      gap: 8px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .input-area button {
+      border: none;
+      background: #1769aa;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .input-area button:hover {
+      background: #0d4f82;
+    }
+  </style>
+
 </head>
 
 <body>
 
+  <div class="chat">
+
+```
+<div class="header">
   <h1>🤖 Anilson Chat</h1>
+  <p>Seu assistente virtual</p>
+</div>
 
-  <p>Olá! Eu sou o Anilson Chat.</p>
-  <p>Como posso te ajudar?</p>
+<div class="messages">
+  <div class="message">
+    Olá! 👋 Eu sou o Anilson Chat.<br>
+    Como posso te ajudar?
+  </div>
+</div>
 
+<div class="input-area">
   <input type="text" placeholder="Escrever uma mensagem">
+  <button>➤</button>
+</div>
+```
 
-  <button>Enviar</button>
+  </div>
 
 </body>
 </html>
