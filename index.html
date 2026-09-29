@@ -122,6 +122,35 @@
 ```
 
   </div>
+<script>
+  const input = document.querySelector('.input-area input');
+  const button = document.querySelector('.input-area button');
+  const messages = document.querySelector('.messages');
 
+  function enviarMensagem() {
+    const texto = input.value.trim();
+
+    if (texto === '') {
+      return;
+    }
+
+    const novaMensagem = document.createElement('div');
+    novaMensagem.className = 'message';
+    novaMensagem.textContent = texto;
+
+    messages.appendChild(novaMensagem);
+
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  button.addEventListener('click', enviarMensagem);
+
+  input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      enviarMensagem();
+    }
+  });
+</script>
 </body>
 </html>
